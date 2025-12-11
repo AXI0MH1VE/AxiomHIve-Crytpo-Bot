@@ -1,0 +1,21 @@
+[package]
+name = "axiom-engine"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+axiom-core = { path = "../axiom-core" }
+axiom-data = { path = "../axiom-data" }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+z3 = { workspace = true }
+rust_decimal = { workspace = true }
+chrono = { workspace = true }
+hex = "0.4"
+

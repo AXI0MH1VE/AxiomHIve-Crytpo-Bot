@@ -1,0 +1,63 @@
+[workspace]
+members = [
+    "axiom-core",
+    "axiom-data",
+    "axiom-engine",
+    "axiom-execution",
+    "axiom-risk",
+    "axiom-oracle",
+    "axiom-cli",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Axiom Hive System"]
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+# Core dependencies
+tokio = { version = "1.35", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Fixed-point arithmetic (deterministic math)
+rust_decimal = { version = "1.33", features = ["serde-with-str"] }
+num-rational = "0.4"
+
+# Cryptographic verification
+ed25519-dalek = "2.1"
+sha2 = "0.10"
+sha3 = "0.10"
+
+# SMT Solver integration
+z3 = "0.4"
+
+# Network and async
+reqwest = { version = "0.11", features = ["json"] }
+tungstenite = "0.21"
+futures = "0.3"
+
+# Time and scheduling
+chrono = { version = "0.4", features = ["serde"] }
+chrono-tz = "0.8"
+
+# Configuration
+config = "0.14"
+dotenv = "0.15"
+
+# Database and storage
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono"] }
+
+# Logging and metrics
+metrics = "0.22"
+metrics-prometheus = "0.2"
+
+# Testing
+proptest = "1.4"
+

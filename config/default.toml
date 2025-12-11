@@ -1,0 +1,35 @@
+# Axiom Hive Configuration
+# The Deterministic Mandate
+
+[system]
+seed = 42
+signature = "C=0"
+protocol = "DAVP"
+
+[risk]
+max_leverage = 3.0
+max_daily_drawdown = 0.03
+min_risk_budget = 0.0025
+max_risk_budget = 0.01
+max_position_size_btc = 10.0
+max_position_size_eth = 100.0
+max_position_size_sol = 1000.0
+
+[data]
+target_latency_orderbook_ms = 5
+target_latency_onchain_ms = 50
+target_latency_ontology_ms = 200
+
+[venues]
+primary = "binance"
+secondary = ["bybit", "hyperliquid"]
+
+[symbols]
+enabled = ["BTC/USD", "ETH/USD", "SOL/USD"]
+
+[monitoring]
+health_check_interval_sec = 1
+alert_threshold_consistency_error = 0.0
+alert_threshold_entropy = 0.000000000001
+alert_threshold_hallucination_rate = 0.0001
+

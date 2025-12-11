@@ -1,0 +1,19 @@
+[package]
+name = "axiom-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+rust_decimal = { workspace = true }
+rust_decimal_macros = "1.33"
+num-rational = { workspace = true }
+ed25519-dalek = { workspace = true }
+sha2 = { workspace = true }
+sha3 = { workspace = true }
+thiserror = { workspace = true }
+chrono = { workspace = true }
+
